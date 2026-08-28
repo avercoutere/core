@@ -206,6 +206,9 @@
     "communication_error": {
       "message": "An error occurred while communicating with the Peblar EV charger: {error}"
     },
+    "customization_update_first": {
+      "message": "Install the customization update before the firmware update, the way the charger's own web interface does."
+    },
     "no_rfid_hardware": {
       "message": "{charger} has no RFID reader, so it has no standalone authorization list."
     },

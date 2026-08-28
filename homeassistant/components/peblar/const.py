@@ -1,5 +1,6 @@
 """Constants for the Peblar integration."""
 
+from datetime import timedelta
 import logging
 from typing import Final
 
@@ -8,6 +9,11 @@ from peblar import ChargeLimiter, CPState
 DOMAIN: Final = "peblar"
 
 CONF_UID: Final = "uid"
+
+# How long to keep waiting for a charger to come back after it was asked to
+# install a package. Peblar's own web interface allows ten minutes for the
+# reboot, and gives up after that.
+UPDATE_RESTART_TIMEOUT: Final = timedelta(minutes=10)
 
 LOGGER = logging.getLogger(__package__)
 
